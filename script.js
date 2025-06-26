@@ -14,13 +14,8 @@ function getRandomDice(count, max) {
 }
 
 function rollDice() {
-  // Instantly clear container
   diceContainer.innerHTML = '';
-
-  // Delay before showing new dice
-  setTimeout(() => {
-    drawNewDice();
-  }, 500);
+  setTimeout(drawNewDice, 300);
 }
 
 function drawNewDice() {
