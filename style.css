@@ -20,7 +20,7 @@ h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   color: white;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -103,5 +103,24 @@ button {
   transition: background 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 5rem;
+  margin-top: rem;
+}
+@keyframes fallOff {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500px);
+    opacity: 1;
+  }
+}
+
+.die-img.fall-away {
+  animation: fallOff 0.4s ease-in forwards;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
