@@ -15,10 +15,7 @@ function getRandomDice(count, max) {
 
 function rollDice() {
   diceContainer.innerHTML = '';
-  setTimeout(drawNewDice, 300);
-}
 
-function drawNewDice() {
   const selected = getRandomDice(NUM_DICE, NUM_IMAGES);
 
   selected.forEach((n, i) => {
@@ -26,8 +23,7 @@ function drawNewDice() {
     die.className = 'die';
 
     const dieImg = document.createElement('div');
-    dieImg.className = 'die-img';
-    dieImg.style.animationDelay = `${i * 0.1}s`;
+    dieImg.className = 'die-img hidden'; // initially hidden
 
     const icon = document.createElement('img');
     icon.src = `dice-images/story_dice${n}.png`;
@@ -35,6 +31,14 @@ function drawNewDice() {
     dieImg.appendChild(icon);
     die.appendChild(dieImg);
     diceContainer.appendChild(die);
+
+    // Delay showing the animation
+setTimeout(() => {
+  dieImg.classList.remove('hidden');
+  dieImg.classList.add('fall');
+  dieImg.style.animationDelay = `${i * 0.1}s`;  // add stagger here
+}, 0);
+
   });
 }
 
