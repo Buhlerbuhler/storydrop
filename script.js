@@ -33,12 +33,10 @@ function rollDice() {
     diceContainer.appendChild(die);
 
     // Delay showing the animation
-setTimeout(() => {
-  dieImg.classList.remove('hidden');
-  dieImg.classList.add('fall');
-  dieImg.style.animationDelay = `${i * 0.1}s`;  // add stagger here
-}, 0);
-
+    setTimeout(() => {
+      dieImg.classList.remove('hidden');
+      dieImg.classList.add('fall');
+    }, i * 100);
   });
 }
 
