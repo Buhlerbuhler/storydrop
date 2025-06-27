@@ -59,3 +59,4 @@ function drawNewDice() {
 // Initial roll and event binding
 rollBtn.addEventListener('click', rollDice);
 rollDice();
+
