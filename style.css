@@ -144,15 +144,22 @@ button {
 }
 
 @media (max-width: 600px) {
+  .dice-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+  }
+
   .die {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
   }
 
   .die-img img {
-    width: 85%;
-    height: 85%;
+    width: 90%;
+    height: 90%;
   }
+}
 
   .dice-grid {
     gap: 1.5rem;
