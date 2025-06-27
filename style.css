@@ -28,6 +28,7 @@ h1 {
 
 .dice-grid {
   display: flex;
+  flex-wrap: wrap; /* allow wrapping */
   justify-content: center;
   gap: 3rem;
   margin-bottom: 4rem;
@@ -140,4 +141,20 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .die {
+    width: 70px;
+    height: 70px;
+  }
+
+  .die-img img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .dice-grid {
+    gap: 1.5rem;
+  }
 }
