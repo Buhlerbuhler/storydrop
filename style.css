@@ -1,3 +1,4 @@
+/* Reset & base styles */
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
-  height: 100vh;
+  min-height: 100vh; /* allows vertical scrolling */
   overflow-x: hidden;
 }
 
@@ -16,6 +17,7 @@ body {
   width: 100%;
 }
 
+/* Header */
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
@@ -26,6 +28,7 @@ h1 {
   text-transform: uppercase;
 }
 
+/* Dice layout */
 .dice-grid {
   display: flex;
   flex-wrap: wrap;
@@ -34,6 +37,7 @@ h1 {
   margin-bottom: 4rem;
   min-height: 200px;
   position: relative;
+  max-width: 100%;
 }
 
 .die {
@@ -68,6 +72,7 @@ h1 {
   pointer-events: none;
 }
 
+/* Animations */
 @keyframes fallspin {
   0% {
     transform: translateY(-300px) rotateZ(-140deg);
@@ -91,22 +96,6 @@ h1 {
   }
 }
 
-button {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 700;
-  padding: 0.75rem 2rem;
-  font-size: 1.2rem;
-  background: #008584;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 5rem;
-}
-
 @keyframes fallOff {
   0% {
     transform: translateY(0);
@@ -127,6 +116,24 @@ button {
   visibility: hidden;
 }
 
+/* Primary button */
+button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  background: #008584;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5rem;
+}
+
+/* Top-right link button (outline) */
 .outline-btn {
   position: absolute;
   top: 20px;
@@ -145,7 +152,7 @@ button {
   text-decoration: none;
 }
 
-/* Responsive layout for small screens */
+/* Responsive layout for mobile */
 @media (max-width: 600px) {
   .dice-grid {
     display: grid;
